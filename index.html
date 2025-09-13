@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio—Bocktear Abid Borat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small custom styles */
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-slate-100 antialiased">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-slate-900/70 glass backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-semibold">Bocktear Abid Borat</a>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#about" class="hover:text-cyan-300">About</a>
+        <a href="#skills" class="hover:text-cyan-300">Skills</a>
+        <a href="#projects" class="hover:text-cyan-300">Projects</a>
+        <a href="#contact" class="hover:text-cyan-300">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="menu" class="p-2 rounded-md hover:bg-slate-700/30">☰</button>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#about" class="block py-2">About</a>
+      <a href="#skills" class="block py-2">Skills</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <div class="bg-gradient-to-r from-cyan-600/20 to-sky-500/10 border border-slate-700 rounded-2xl p-8">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Hi, I'm <span class="text-cyan-300">Bocktear Abid Borat</span></h1>
+      <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">A passionate web developer focused on building accessible, responsive, and performant web applications.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="#projects" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 rounded-lg font-medium">See my work</a>
+        <a href="#contact" class="px-6 py-3 border border-slate-700 rounded-lg">Contact me</a>
+      </div>
+      <div class="mt-8 flex justify-center gap-4 text-sm text-slate-400">
+        <div>Location: Bangladesh</div>
+        <div>•</div>
+        <div>Open to freelance</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 items-center">
+      <div class="md:col-span-2 bg-slate-800/60 p-6 rounded-xl">
+        <h2 class="text-2xl font-semibold text-cyan-300">About Me</h2>
+        <p class="mt-4 text-slate-300">I'm a web developer with experience in building full-stack applications using modern technologies. I enjoy turning ideas into user-friendly products and continuously learning new tools and patterns to improve my craft.</p>
+        <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 text-slate-300">
+          <li>🎯 Focus on performance & accessibility</li>
+          <li>⚙️ JavaScript, React, Node.js</li>
+          <li>🧠 Strong problem-solving</li>
+          <li>📦 Familiar with Git, CI/CD, and deployment</li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-xl bg-gradient-to-tr from-slate-700 to-slate-800 text-center">
+        <img src="images/download.png" alt="Profile" class="mx-auto w-40 h-40 rounded-full object-cover border-4 border-slate-600">
+        <h3 class="mt-4 font-medium">Bocktear Abid Borat</h3>
+        <p class="text-sm text-slate-400">Web Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold text-center text-cyan-300">Skills</h2>
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-slate-800/50 p-4 rounded-lg text-center">
+        <div class="font-semibold">HTML</div>
+        <div class="text-sm text-slate-400">Semantic markup</div>
+      </div>
+      <div class="bg-slate-800/50 p-4 rounded-lg text-center">
+        <div class="font-semibold">CSS</div>
+        <div class="text-sm text-slate-400">Tailwind, Flexbox, Grid</div>
+      </div>
+      <div class="bg-slate-800/50 p-4 rounded-lg text-center">
+        <div class="font-semibold">JavaScript</div>
+        <div class="text-sm text-slate-400">ES6+, DOM</div>
+      </div>
+      <div class="bg-slate-800/50 p-4 rounded-lg text-center">
+        <div class="font-semibold">React</div>
+        <div class="text-sm text-slate-400">Hooks & SPA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold text-center text-cyan-300">Projects</h2>
+    <div class="mt-8 grid gap-6 grid-cols-1 md:grid-cols-3">
+      <article class="bg-slate-800/60 p-4 rounded-lg hover:scale-[1.02] transition-transform">
+        <img src="assets/project-placeholder.png" alt="Project 1" class="w-full h-40 object-cover rounded-md">
+        <h3 class="mt-3 font-semibold">Project Title 1</h3>
+        <p class="mt-2 text-sm text-slate-400">Short description of the project — tech used, goal, and link.</p>
+        <div class="mt-3 flex gap-2">
+          <a href="#" class="text-xs px-3 py-1 border rounded text-slate-200">Live</a>
+          <a href="#" class="text-xs px-3 py-1 border rounded text-slate-200">Code</a>
+        </div>
+      </article>
+
+      <article class="bg-slate-800/60 p-4 rounded-lg hover:scale-[1.02] transition-transform">
+        <img src="assets/project-placeholder.png" alt="Project 2" class="w-full h-40 object-cover rounded-md">
+        <h3 class="mt-3 font-semibold">Project Title 2</h3>
+        <p class="mt-2 text-sm text-slate-400">Short description of the project — tech used, goal, and link.</p>
+        <div class="mt-3 flex gap-2">
+          <a href="#" class="text-xs px-3 py-1 border rounded text-slate-200">Live</a>
+          <a href="#" class="text-xs px-3 py-1 border rounded text-slate-200">Code</a>
+        </div>
+      </article>
+
+      <article class="bg-slate-800/60 p-4 rounded-lg hover:scale-[1.02] transition-transform">
+        <img src="assets/project-placeholder.png" alt="Project 3" class="w-full h-40 object-cover rounded-md">
+        <h3 class="mt-3 font-semibold">Project Title 3</h3>
+        <p class="mt-2 text-sm text-slate-400">Short description of the project — tech used, goal, and link.</p>
+        <div class="mt-3 flex gap-2">
+          <a href="#" class="text-xs px-3 py-1 border rounded text-slate-200">Live</a>
+          <a href="#" class="text-xs px-3 py-1 border rounded text-slate-200">Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold text-center text-cyan-300">Contact</h2>
+    <div class="mt-6 bg-slate-800/60 p-6 rounded-lg">
+      <form action="#" class="grid gap-4 md:grid-cols-2">
+        <div>
+          <label class="text-sm text-slate-300">Name</label>
+          <input type="text" class="mt-1 w-full rounded-md bg-slate-900/40 border border-slate-700 p-2" placeholder="Your name">
+        </div>
+        <div>
+          <label class="text-sm text-slate-300">Email</label>
+          <input type="email" class="mt-1 w-full rounded-md bg-slate-900/40 border border-slate-700 p-2" placeholder="you@example.com">
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-sm text-slate-300">Message</label>
+          <textarea class="mt-1 w-full rounded-md bg-slate-900/40 border border-slate-700 p-2" rows="5" placeholder="Write your message..."></textarea>
+        </div>
+        <div class="md:col-span-2 flex justify-end">
+          <button type="submit" class="px-6 py-2 bg-cyan-500 rounded-md hover:bg-cyan-400">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="max-w-5xl mx-auto px-6 py-8 text-center text-slate-400">
+    <div>© {2025} Bocktear Abid Borat. Built with ❤️ and Tailwind CSS.</div>
+    <div class="mt-2 text-sm">Made in Bangladesh</div>
+  </footer>
+
+  <script>
+    // small interactive bits
+    document.getElementById('menuBtn').addEventListener('click', function(){
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    });
+    // set year
+    document.querySelector('footer div').innerText = '© ' + new Date().getFullYear() + ' [Bocktear Abid Borat]. Built with ❤️ and Tailwind CSS.';
+  </script>
+</body>
+</html>
