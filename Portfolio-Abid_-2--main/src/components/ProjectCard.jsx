@@ -6,14 +6,8 @@ import {
   FaGooglePlay,
   FaPlay,
 } from "react-icons/fa";
-
 function ProjectCard({ project, featured = false }) {
   if (!project) return null;
-
-  // =========================
-  // Animation Variants
-  // =========================
-
   const cardVariants = {
     hidden: {
       opacity: 0,
@@ -85,9 +79,11 @@ function ProjectCard({ project, featured = false }) {
           ease: "easeOut",
         },
       }}
-      className={`group relative overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/80 shadow-xl shadow-black/20 backdrop-blur-sm ${
-        featured ? "lg:flex" : ""
-      }`}
+    
+className={`group relative min-w-0 overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/80 shadow-xl shadow-black/20 backdrop-blur-sm transition-colors duration-300 hover:border-slate-700 ${
+  featured ? "lg:flex lg:items-stretch" : "h-full"
+}`}
+
     >
       {/* =========================
           Animated Border Glow
@@ -113,80 +109,67 @@ function ProjectCard({ project, featured = false }) {
           MEDIA
       ========================== */}
 
-      <div
-        className={`relative z-10 overflow-hidden bg-black ${
-          featured ? "lg:w-1/2" : "w-full"
-        }`}
+
+
+{/* Professional Project Media */}
+<div
+  className={`relative z-10 min-w-0 overflow-hidden bg-slate-950 ${
+    featured
+      ? "w-full lg:w-1/2 lg:self-stretch"
+      : "w-full"
+  }`}
+>
+  {project.video ? (
+    <div className="relative h-full w-full overflow-hidden bg-black">
+      <video
+        key={project.video}
+        src={project.video}
+        poster={project.image}
+        controls
+        muted
+        playsInline
+        preload="metadata"
+        disablePictureInPicture
+        className="block aspect-video w-full bg-black object-contain lg:aspect-auto lg:h-full lg:min-h-[320px]"
+        onVolumeChange={(event) => {
+          // Keep the video muted, even if a user tries to enable sound.
+          if (!event.currentTarget.muted) {
+            event.currentTarget.muted = true;
+          }
+        }}
+        onError={(event) => {
+          console.error("Video loading failed:", {
+            src: event.currentTarget.currentSrc,
+            error: event.currentTarget.error?.message,
+          });
+        }}
       >
-        <motion.div
-          variants={imageVariants}
-          initial="rest"
-          whileHover="hover"
-          className="relative h-full w-full"
-        >
-          {project.video ? (
-            <div className="relative w-full">
-              <video
-                src={project.video}
-                poster={project.image}
-                controls
-                muted
-                playsInline
-                preload="metadata"
-                className="block h-auto min-h-[240px] w-full object-cover sm:min-h-[300px] lg:min-h-[400px]"
-                onError={(event) => {
-                  console.error(
-                    "Video failed to load:",
-                    project.video,
-                    event.currentTarget.error
-                  );
-                }}
-              />
+        Your browser does not support HTML video.
+      </video>
 
-              {/* Video Overlay */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
-
-              {/* Video Badge */}
-              <motion.div
-                initial={{ opacity: 0, x: -15 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.3,
-                }}
-                className="pointer-events-none absolute left-4 top-4 flex items-center gap-2 rounded-full border border-cyan-400/30 bg-slate-950/90 px-3 py-2 text-xs font-semibold text-cyan-400 shadow-lg shadow-cyan-500/10 backdrop-blur-md"
-              >
-                <motion.span
-                  animate={{
-                    scale: [1, 1.25, 1],
-                    opacity: [1, 0.6, 1],
-                  }}
-                  transition={{
-                    duration: 1.8,
-                    repeat: Infinity,
-                  }}
-                >
-                  <FaPlay className="text-[9px]" />
-                </motion.span>
-
-                Dashboard Preview
-              </motion.div>
-            </div>
-          ) : (
-            <div className="relative overflow-hidden">
-              <img
-                src={project.image}
-                alt={`${project.title} project preview`}
-                className="block min-h-[240px] w-full object-cover sm:min-h-[300px] lg:min-h-[400px]"
-              />
-
-              {/* Image Overlay */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-40" />
-            </div>
-          )}
-        </motion.div>
+      {/* Preview badge */}
+      <div className="pointer-events-none absolute left-3 top-3 z-10 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-slate-950/90 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-cyan-300 shadow-lg sm:left-4 sm:top-4 sm:text-xs">
+        <FaPlay className="text-[9px]" />
+        Dashboard Preview
       </div>
+
+      {/* Bottom gradient for a polished appearance */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black/30 to-transparent" />
+    </div>
+  ) : (
+    <div className="aspect-video w-full overflow-hidden bg-slate-900 lg:aspect-video">
+      <img
+        src={project.image}
+        alt={`${project.title} project preview`}
+        loading="lazy"
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+      />
+    </div>
+  )}
+</div>
+
+
+
 
       {/* =========================
           CONTENT
