@@ -10,7 +10,7 @@ const Footer = () => {
           </h3>
 
           <p className="mt-1 text-sm text-slate-400">
-            MERN Stack Developer
+        Web Developer
           </p>
         </div>
 

@@ -128,7 +128,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="bg-slate-950 px-4 py-20 sm:px-6 sm:py-24 lg:px-20"
+      className="bg-slate-950 px-4 py-10 sm:px-6 sm:py-10 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
         {/* Section heading */}

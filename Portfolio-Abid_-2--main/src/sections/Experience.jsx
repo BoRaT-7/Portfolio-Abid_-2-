@@ -38,7 +38,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden bg-slate-950 px-6 py-24 md:px-10 lg:px-12"
+      className="relative overflow-hidden bg-slate-950 px-6 py-10 md:px-10 lg:px-12"
     >
       {/* Background Glow */}
       <div className="absolute -left-40 top-1/3 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl" />

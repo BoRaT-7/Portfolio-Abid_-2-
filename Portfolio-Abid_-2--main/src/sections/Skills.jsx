@@ -77,7 +77,8 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-slate-900/40 px-5 py-20 sm:px-6 md:px-10 md:py-24 lg:px-12"
+      className="relative overflow-hidden bg-slate-900/40 
+      px-5 py-10 sm:px-6 md:px-10 md:py-10 lg:px-12"
     >
       {/* Background Effects */}
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-cyan-500/5 blur-3xl" />
@@ -105,7 +106,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="mb-14 text-center"
+          className="mb-10 text-center"
         >
           <motion.p
             initial={{ opacity: 0, letterSpacing: "0.05em" }}

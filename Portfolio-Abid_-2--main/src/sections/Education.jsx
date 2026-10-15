@@ -2,12 +2,12 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="min-h-screen bg-slate-950 px-6 py-20 text-white"
+      className="bg-slate-950 px-6 pt-10 pb-10 text-white"
     >
       <div className="mx-auto max-w-6xl">
 
         {/* Section Heading */}
-        <div className="mb-14 text-center">
+        <div className="mb-10 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-[4px] text-cyan-400">
             My Education
           </p>

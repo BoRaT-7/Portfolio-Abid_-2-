@@ -37,10 +37,10 @@ const About = () => {
       className="
         relative overflow-hidden
         bg-slate-950
-        px-5 py-20
+        px-5 py-2
         sm:px-6 sm:py-24
         md:px-10
-        lg:px-12 lg:py-28
+        lg:px-12 lg:py-10
       "
     >
       {/* =====================================================
