@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+
 import {
   FiCode,
   FiLayers,
@@ -12,22 +13,22 @@ const About = () => {
     {
       icon: <FiCode />,
       title: "Frontend Development",
-      text: "Building modern and responsive interfaces with React.js and Tailwind CSS.",
+      text: "Building modern, responsive interfaces using React.js, Next.js, JavaScript and Tailwind CSS.",
     },
     {
       icon: <FiLayers />,
-      title: "Full-Stack Development",
-      text: "Developing complete web applications using the MERN stack and REST APIs.",
+      title: "Backend Development",
+      text: "Developing dynamic web applications and REST APIs using PHP, Laravel, Node.js and Express.js.",
     },
     {
       icon: <FiDatabase />,
-      title: "Backend & Database",
-      text: "Working with Node.js, Express.js, MongoDB and Mongoose for scalable applications.",
+      title: "Database & Integration",
+      text: "Working with MySQL and MongoDB to build structured, reliable and data-driven applications.",
     },
     {
       icon: <FiMonitor />,
-      title: "Admin Dashboards",
-      text: "Creating practical admin dashboards with reusable components and CRUD functionality.",
+      title: "Full-Stack Solutions",
+      text: "Creating complete web applications, admin dashboards, authentication systems and CRUD functionality.",
     },
   ];
 
@@ -37,15 +38,13 @@ const About = () => {
       className="
         relative overflow-hidden
         bg-slate-950
-        px-5 py-2
+        px-5 py-16
         sm:px-6 sm:py-24
         md:px-10
-        lg:px-12 lg:py-10
+        lg:px-12 lg:py-20
       "
     >
-      {/* =====================================================
-          BACKGROUND EFFECTS
-      ====================================================== */}
+      {/* BACKGROUND EFFECTS */}
 
       <motion.div
         animate={{
@@ -88,15 +87,11 @@ const About = () => {
         "
       />
 
-      {/* =====================================================
-          MAIN CONTAINER
-      ====================================================== */}
+      {/* MAIN CONTAINER */}
 
       <div className="relative mx-auto max-w-7xl">
 
-        {/* =================================================
-            SECTION HEADER
-        ================================================== */}
+        {/* SECTION HEADER */}
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -141,7 +136,8 @@ const About = () => {
             </span>
           </h2>
 
-          {/* Animated line */}
+          {/* ANIMATED LINE */}
+
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 64 }}
@@ -159,15 +155,11 @@ const About = () => {
           />
         </motion.div>
 
-        {/* =================================================
-            MAIN ABOUT GRID
-        ================================================== */}
+        {/* MAIN ABOUT GRID */}
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-          {/* =================================================
-              LEFT — TEXT
-          ================================================== */}
+          {/* LEFT — ABOUT TEXT */}
 
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -178,7 +170,8 @@ const About = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            {/* Main paragraph */}
+            {/* MAIN INTRODUCTION */}
+
             <p
               className="
                 text-base
@@ -189,32 +182,39 @@ const About = () => {
             >
               I'm a{" "}
               <span className="font-semibold text-white">
-                MERN Stack Developer
+                Junior Full-Stack Web Developer
               </span>{" "}
-              and Computer Science & Engineering graduate with hands-on
-              experience building modern web applications and responsive
-              admin dashboards.
+              and Computer Science & Engineering graduate passionate
+              about building modern web applications and responsive
+              digital experiences.
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-500 sm:text-base sm:leading-8">
-              My primary focus is frontend and full-stack web development.
-              I work with React.js, JavaScript, Node.js, Express.js,
-              MongoDB, REST APIs, Firebase and JWT authentication.
+              I specialize in{" "}
+              <span className="font-medium text-cyan-400">
+                PHP, Laravel and MERN Stack
+              </span>
+              , working with React.js, JavaScript, Node.js,
+              Express.js, MongoDB and MySQL.
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-500 sm:text-base sm:leading-8">
-              I enjoy turning ideas into functional, user-friendly
-              applications with clean architecture, reusable components
-              and responsive interfaces.
+              I focus on clean code, reusable components,
+              responsive UI and practical solutions while
+              continuously exploring modern technologies,
+              including Next.js.
             </p>
 
-            {/* =================================================
-                STATS
-            ================================================== */}
+            {/* STATS */}
 
-            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-slate-800 pt-7 sm:mt-9 sm:gap-6 sm:pt-8">
+            <div className="
+              mt-8 grid grid-cols-3 gap-3
+              border-t border-slate-800
+              pt-7 sm:mt-9 sm:gap-6 sm:pt-8
+            ">
 
-              {/* Projects */}
+              {/* PROJECTS */}
+
               <motion.div
                 whileHover={{ y: -4 }}
                 className="group"
@@ -238,7 +238,8 @@ const About = () => {
                 </p>
               </motion.div>
 
-              {/* MERN */}
+              {/* FULL STACK */}
+
               <motion.div
                 whileHover={{ y: -4 }}
                 className="group"
@@ -254,15 +255,16 @@ const About = () => {
                     sm:text-3xl
                   "
                 >
-                  MERN
+                  Full-Stack
                 </motion.h3>
 
                 <p className="mt-1 text-[10px] text-slate-500 sm:text-xs">
-                  Stack Focus
+                  Development Focus
                 </p>
               </motion.div>
 
-              {/* Education */}
+              {/* EDUCATION */}
+
               <motion.div
                 whileHover={{ y: -4 }}
                 className="group"
@@ -289,9 +291,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* =================================================
-              RIGHT — HIGHLIGHTS
-          ================================================== */}
+          {/* RIGHT — PROFESSIONAL HIGHLIGHTS */}
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -348,7 +348,8 @@ const About = () => {
                   sm:p-6
                 "
               >
-                {/* Card glow */}
+                {/* CARD GLOW */}
+
                 <div
                   className="
                     pointer-events-none
@@ -363,7 +364,8 @@ const About = () => {
                   "
                 />
 
-                {/* Top accent */}
+                {/* TOP ACCENT */}
+
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "25%" }}
@@ -381,7 +383,8 @@ const About = () => {
                   "
                 />
 
-                {/* Icon */}
+                {/* ICON */}
+
                 <motion.div
                   whileHover={{
                     rotate: -5,
@@ -389,8 +392,7 @@ const About = () => {
                     y: -3,
                   }}
                   className="
-                    relative
-                    mb-5
+                    relative mb-5
                     flex h-11 w-11
                     items-center justify-center
                     rounded-xl
@@ -410,31 +412,29 @@ const About = () => {
                   {item.icon}
                 </motion.div>
 
-                {/* Title */}
+                {/* TITLE */}
+
                 <h3 className="relative text-base font-semibold text-white sm:text-lg">
                   {item.title}
                 </h3>
 
-                {/* Text */}
+                {/* DESCRIPTION */}
+
                 <p className="relative mt-3 text-xs leading-6 text-slate-500 sm:text-sm">
                   {item.text}
                 </p>
 
-                {/* Bottom arrow */}
-                <motion.div
-                  initial={{ opacity: 0, x: -5 }}
-                  whileHover={{
-                    opacity: 1,
-                    x: 0,
-                  }}
+                {/* BOTTOM ACCENT */}
+
+                <div
                   className="
-                    mt-4
-                    h-px w-8
+                    mt-4 h-px w-8
                     bg-cyan-400/40
-                    transition-all
+                    transition-all duration-300
                     group-hover:w-12
                   "
                 />
+
               </motion.div>
             ))}
           </motion.div>

@@ -1,11 +1,13 @@
 
 import { motion } from "framer-motion";
+
 import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
   FaGithub,
 } from "react-icons/fa";
+
 import {
   SiJavascript,
   SiTailwindcss,
@@ -14,6 +16,10 @@ import {
   SiFirebase,
   SiJsonwebtokens,
   SiPostman,
+  SiPhp,
+  SiLaravel,
+  SiMysql,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -23,33 +29,37 @@ const Skills = () => {
       skills: [
         { name: "React.js", icon: <FaReact /> },
         { name: "JavaScript ES6+", icon: <SiJavascript /> },
+        { name: "Next.js", icon: <SiNextdotjs /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss /> },
       ],
     },
     {
       title: "Backend Development",
       skills: [
+        { name: "PHP", icon: <SiPhp /> },
+        { name: "Laravel", icon: <SiLaravel /> },
         { name: "Node.js", icon: <FaNodeJs /> },
         { name: "Express.js", icon: <SiExpress /> },
-        { name: "REST API", icon: <SiExpress /> },
       ],
     },
     {
-      title: "Database",
+      title: "Database Management",
       skills: [
+        { name: "MySQL", icon: <SiMysql /> },
         { name: "MongoDB", icon: <SiMongodb /> },
         { name: "Mongoose", icon: <SiMongodb /> },
       ],
     },
     {
-      title: "Authentication",
+      title: "API & Authentication",
       skills: [
+        { name: "REST API", icon: <SiExpress /> },
         { name: "Firebase", icon: <SiFirebase /> },
         { name: "JWT", icon: <SiJsonwebtokens /> },
       ],
     },
     {
-      title: "Tools",
+      title: "Development Tools",
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <FaGithub /> },
@@ -65,8 +75,7 @@ const Skills = () => {
     "Microsoft Word",
     "Microsoft PowerPoint",
     "Facebook Ads",
-    "Shopify",
-    "PHP",
+    "Shopify Store Design",
     "Python",
     "Computer Networking",
     "Data Structures",
@@ -77,8 +86,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-slate-900/40 
-      px-5 py-10 sm:px-6 md:px-10 md:py-10 lg:px-12"
+      className="relative overflow-hidden bg-slate-900/40 px-5 py-10 sm:px-6 md:px-10 md:py-10 lg:px-12"
     >
       {/* Background Effects */}
       <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-cyan-500/5 blur-3xl" />
@@ -99,8 +107,7 @@ const Skills = () => {
       />
 
       <div className="relative mx-auto max-w-7xl">
-
-        {/* ================= HEADER ================= */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -136,12 +143,13 @@ const Skills = () => {
           />
 
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base">
-            A practical set of technologies I use to build responsive,
-            scalable and user-friendly web applications.
+            My technical skills and tools for building modern, responsive,
+            and scalable web applications using PHP, Laravel, and the MERN
+            Stack.
           </p>
         </motion.div>
 
-        {/* ================= SKILL GROUPS ================= */}
+        {/* Skill Groups */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group, index) => (
             <motion.div
@@ -182,7 +190,6 @@ const Skills = () => {
               <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-cyan-400/5 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
 
               <div className="relative z-10">
-
                 {/* Title */}
                 <div className="mb-6 flex items-center gap-3">
                   <div className="h-2 w-2 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/40" />
@@ -232,7 +239,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* ================= ADDITIONAL SKILLS ================= */}
+        {/* Additional Skills */}
         <motion.div
           initial={{
             opacity: 0,
@@ -259,7 +266,6 @@ const Skills = () => {
           <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-cyan-400/5 blur-3xl" />
 
           <div className="relative z-10">
-
             <div className="mb-6 flex items-center gap-3">
               <div className="h-2 w-2 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/40" />
 

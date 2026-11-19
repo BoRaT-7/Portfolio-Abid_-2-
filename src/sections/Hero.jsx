@@ -1,24 +1,28 @@
-
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaReact,
-  FaNodeJs,
-} from "react-icons/fa";
-import {
-  SiMongodb,
-  SiJavascript,
-  SiTailwindcss,
-} from "react-icons/si";
-import {
-  FiArrowDown,
-  FiDownload,
-  FiExternalLink,
-} from "react-icons/fi";
+import { FaGithub, FaLinkedin, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiMongodb, SiJavascript, SiTailwindcss } from "react-icons/si";
+import { FiArrowDown, FiDownload, FiExternalLink } from "react-icons/fi";
+
+import { FaPhp } from "react-icons/fa";
+import { SiLaravel, SiMysql } from "react-icons/si";
 
 const Hero = () => {
   const techStack = [
+    {
+      icon: FaPhp,
+      name: "PHP",
+      color: "hover:text-indigo-500",
+    },
+    {
+      icon: SiLaravel,
+      name: "Laravel",
+      color: "hover:text-red-500",
+    },
+    {
+      icon: SiMysql,
+      name: "MySQL",
+      color: "hover:text-blue-500",
+    },
     {
       icon: FaReact,
       name: "React.js",
@@ -33,11 +37,6 @@ const Hero = () => {
       icon: FaNodeJs,
       name: "Node.js",
       color: "hover:text-green-400",
-    },
-    {
-      icon: SiMongodb,
-      name: "MongoDB",
-      color: "hover:text-green-500",
     },
     {
       icon: SiTailwindcss,
@@ -141,7 +140,6 @@ const Hero = () => {
         "
       >
         <div className="grid w-full items-center gap-14 lg:grid-cols-2 lg:gap-16">
-
           {/* =================================================
               LEFT CONTENT
           ================================================= */}
@@ -192,7 +190,6 @@ const Hero = () => {
               "
             >
               Bocktear
-
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -217,11 +214,11 @@ const Hero = () => {
               className="mt-5"
             >
               <h2 className="text-xl font-semibold text-slate-200 sm:text-2xl md:text-3xl">
-                MERN Stack Developer
+                Junior Full-Stack Developer
               </h2>
 
               <p className="mt-2 text-base text-slate-500 sm:text-lg">
-                Frontend Developer
+                PHP, Laravel & MERN Stack
               </p>
             </motion.div>
 
@@ -241,9 +238,9 @@ const Hero = () => {
                 md:text-lg
               "
             >
-              I build modern, responsive and user-friendly web applications
-              using React.js, JavaScript, Node.js, Express.js and MongoDB.
-              I focus on clean UI, reusable components and practical solutions.
+              Junior Web Developer specializing in PHP, Laravel, and MERN Stack.
+              Passionate about building modern, scalable web applications with
+              clean code, responsive UI, and practical solutions.
             </motion.p>
 
             {/* =================================================
@@ -281,7 +278,6 @@ const Hero = () => {
                 "
               >
                 View My Work
-
                 <FiExternalLink className="transition-transform duration-300 group-hover:translate-x-1" />
               </motion.a>
 
@@ -386,7 +382,7 @@ const Hero = () => {
             </motion.div>
 
             {/* =================================================
-                TECH STACK
+
             ================================================= */}
 
             <motion.div
@@ -456,7 +452,6 @@ const Hero = () => {
             "
           >
             <div className="relative">
-
               {/* Main Glow */}
               <motion.div
                 animate={{
@@ -634,7 +629,7 @@ const Hero = () => {
                     </p>
 
                     <p className="text-xs font-semibold text-white sm:text-sm">
-                      React Development
+                     PHP, Laravel & MERN Stack
                     </p>
                   </div>
                 </div>
@@ -677,7 +672,7 @@ const Hero = () => {
                 </p>
 
                 <p className="text-base font-bold text-cyan-400 sm:text-lg">
-                  Frontend
+              Full-Stack 
                 </p>
 
                 <p className="text-[10px] text-slate-500 sm:text-xs">
@@ -741,9 +736,7 @@ const Hero = () => {
           md:flex
         "
       >
-        <span className="text-[10px] uppercase tracking-[0.3em]">
-          Scroll
-        </span>
+        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
 
         <FiArrowDown />
       </motion.a>

@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import {
   FiBriefcase,
@@ -8,16 +9,29 @@ import {
 const Experience = () => {
   const experiences = [
     {
-      company: "SysMatrix Technologies Ltd.",
-      role: "Media Intelligence Executive",
-      period: "June 2026 – Present",
+      company: "Winter Technologies Ltd. (Deshfiri)",
+      role: "Junior Software Engineer",
+      period: "November 2026 – Present",
       type: "Full-time",
       description:
-        "Monitor and analyze online media coverage, brand mentions, and digital media data while maintaining accurate reporting and data organization.",
+        "Working on web application development using PHP, Laravel, React, and modern web technologies, focusing on building functional, responsive, and maintainable software solutions.",
       responsibilities: [
-        "Monitor and analyze online media coverage and brand mentions.",
-        "Collect, verify, and organize media data for accurate reporting.",
-        "Prepare concise media intelligence reports using Microsoft Excel.",
+        "Develop and maintain web applications using PHP and Laravel.",
+        "Work with frontend technologies to build responsive and user-friendly interfaces.",
+        "Integrate REST APIs, manage databases, and implement application features.",
+      ],
+    },
+    {
+      company: "SysMatrix Technologies Ltd.",
+      role: "Media Intelligence Executive",
+      period: "June 2026 – October 2026",
+      type: "Full-time",
+      description:
+        "Monitored and analyzed online media coverage, brand mentions, and digital media data while maintaining accurate reporting and data organization.",
+      responsibilities: [
+        "Monitored and analyzed online media coverage and brand mentions.",
+        "Collected, verified, and organized media data for accurate reporting.",
+        "Prepared concise media intelligence reports using Microsoft Excel.",
       ],
     },
     {
@@ -62,8 +76,8 @@ const Experience = () => {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-slate-500">
-            My experience across frontend development and digital media
-            operations.
+            My experience across software development, frontend
+            development, and digital media operations.
           </p>
 
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-cyan-400" />
